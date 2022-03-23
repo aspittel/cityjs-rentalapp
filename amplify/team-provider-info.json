@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cityjsrentalapp-staging-191450-authRole",
+      "UnauthRoleArn": "arn:aws:iam::000691573582:role/amplify-cityjsrentalapp-staging-191450-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::000691573582:role/amplify-cityjsrentalapp-staging-191450-authRole",
+      "Region": "us-west-2",
+      "DeploymentBucketName": "amplify-cityjsrentalapp-staging-191450-deployment",
+      "UnauthRoleName": "amplify-cityjsrentalapp-staging-191450-unauthRole",
+      "StackName": "amplify-cityjsrentalapp-staging-191450",
+      "StackId": "arn:aws:cloudformation:us-west-2:000691573582:stack/amplify-cityjsrentalapp-staging-191450/83e4ff80-aadd-11ec-8351-0a9b232c8877",
+      "AmplifyAppId": "d36c46e0y087b1"
+    }
+  }
+}

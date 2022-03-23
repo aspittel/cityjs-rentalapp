@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { DataStore } from 'aws-amplify'
+import { useEffect } from 'react'
+import { Rental } from './models'
+import { RentalCollection } from './ui-components'
+import { withAuthenticator } from '@aws-amplify/ui-react' // or 'aws-amplify-react-native';
 
-function App() {
+function App () {
+  useEffect(() => {
+    const pullData = async () => {
+      const rentals = await DataStore.query(Rental)
+      console.log(rentals)
+    }
+    pullData()
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <RentalCollection type='grid' />
+  )
 }
 
-export default App;
+export default withAuthenticator(App)
